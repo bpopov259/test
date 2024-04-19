@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    max-width: 1018px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+p, h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+a, button, input, svg, svg path, img, rect, path {
+    transition: all 0.5s ease;
+}
+
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active {
+    outline: none;
+}
+
+ul, li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+img, video, svg {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+div, li, a, input {
+    box-sizing: border-box;
+}
+
+.navigation__burger {
+    display: none;
+}
+
+/* wrapper-main */ 
+
+.wrapper-main {
+    display: flex;
+}
+
+/* navigation */
+
+.navigation {
+    width: 100%;
+    max-width: 21.3%;
+    padding: 36px 28px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    gap: 55px;
+    background-color: #fff;
+    position: relative;
+    z-index: 100;
+}
+
+.navigation__logo {
+    display: inline-flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+
+.navigation__logo svg {
+    margin-right: 8px;
+    width: 1.4em;
+}
+
+.navigation__logo span {
+    color: #838383;
+    font-size: 10px;
+    align-self: flex-end;
+    translate: 4px -5px;
+}
+
+.navigation__list {
+    row-gap: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation__link {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding: 11px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    border-radius: 8px;
+    color: #9197B3;
+}
+
+.navigation__link.active {
+    background-color: #5932EA;
+}
+
+.navigation__link.active {
+    color: #fff;
+}
+
+.navigation__link.active path {
+    fill: #fff;
+}
+
+.navigation__link.active svg:last-child path {
+    fill: none;
+    stroke: #fff;
+}
+
+/* так-как менять черес сss фон саму svg нельзя, пришлось их добавлять в html */
+
+/* .navigation__item:not(:first-child) .navigation__link:after {
+    content: '';
+    background: url(../img/menu-arrow.svg) no-repeat center/cover;
+    width: 4px;
+    height: 8px;
+    margin-left: auto;
+} */
+
+.navigation__link svg {
+    margin-right: 16px;
+    flex: none;
+}
+
+.navigation__link svg:not(:first-child) {
+    margin-left: auto;
+}
+
+.navigation__user {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    margin-top: auto;
+}
+
+.navigation__user img {
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+}
+
+.navigation__user-info h4 {
+    font-size: 500px;
+    font-size: 14px;
+}
+
+.navigation__user-info p {
+    font-size: 12px;
+    color: #757575;
+}
+
+/* customers */
+
+.customers {
+    padding: 45px 0;
+    background-color: #fafbff;
+    width: 100%;
+}
+
+.customers__title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+
+.customers__box {
+    background-color: #fff;
+    box-shadow: 0px 10px 60px #E2ECF9;
+    padding: 35px 0;
+    border-radius: 30px;
+}
+
+.customers__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 54px 0 38px;
+    margin-bottom: 50px;
+}
+
+.customers__header-info h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.customers__header-info p.successful {
+    font-size: 14px;
+    color: #16C098;
+}
+
+.customers__header-search form {
+    position: relative;
+}
+
+.customers__header-search input, .customers__header-search button {
+    outline: none;
+    background: transparent;
+}
+
+.customers__header-search input {
+    width: 216px;
+    max-width: 216px;
+    height: 38px;
+    padding-left: 41px;
+    border-radius: 100px;
+    border: 1px solid #f9fbff;
+    color: #CDCDCD;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #f9fbff;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #CDCDCD;
+}
+
+.customers__header-search button {
+    border: none;
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6px;
+    cursor: pointer;
+}
+
+.customers__header-search button:before {
+    content: "";
+    background: url(../img/search.svg) no-repeat center/cover;
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+/* table */
+
+.table {
+   margin-bottom: 30px;
+}
+
+.table__head {
+    display: flex;
+    padding: 0 46px 14px 38px;
+    justify-content: space-between;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.table__head p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #B5B7C0;
+    letter-spacing: -0.01em;
+}
+
+.table__head p:first-child,
+.table__data {
+    width: 123px;
+}
+
+.table__head p:nth-child(2),
+.table__paysend {
+    width: 82px;
+}
+
+.table__head p:nth-child(3),
+.table__account {
+    width: 111px;
+}
+
+.table__head p:nth-child(4),
+.table__counterparty {
+    width: 146px;
+}
+
+.table__head p:nth-child(5),
+.table__summury {
+    width: 93px;
+}
+
+.table__head p:nth-child(6),
+.table__comment {
+    width: 80px;
+}
+
+/* table__item */
+
+.table__item {
+    padding: 20px 0 20px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 886px;
+    margin: auto;
+}
+
+.table__item:not(:first-child) {
+    border-top: 1px solid #EEEEEE;
+}
+
+.table__item:last-child {
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.table__item p {
+    color: #292D32;
+    letter-spacing: -0.01em;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.table__item a {
+    font-size: 12px;
+    line-height: 16px;
+    color: #7096FF;
+    border: 1px solid #7096FF;
+    border-radius: 7px;
+    width: 100%;
+    max-width: 94px;
+    text-align: center;
+    padding: 4px;
+    display: inline-block;
+}
+
+.table__comment span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    background-color: #A6E7D8;
+    border: 1px solid #00B087;
+    color: #008767;
+    padding: 4px 0;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.table__comment span.active__disactive {
+    color: #DF0404;
+    border-color: #DF0404;
+    background-color: #FFC4C4;
+}
+
+/* customers__bottom */
+
+.customers__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 38px;
+}
+
+.customers__bottom-info {
+    font-size: 14px;
+    font-weight: 500;
+    color: #B5B7C0;
+}
+
+.customers__bottom-pagination {
+    display: flex;
+    gap: 12px;
+}
+
+.customers__bottom-pagination li {
+    width: 26px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    color: #404B52;
+}
+
+.customers__bottom-pagination li.active {
+    background-color: #5932EA;
+    color: #fff;
+}
+
+.customers__bottom-pagination li.customers__bottom-dots {
+    width: 9px;
+    height: auto;
+    background-color: transparent;
+}
